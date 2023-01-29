@@ -1,0 +1,404 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: #303952 !important; 
+    margin: 0;
+    overflow-x: hidden;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/*Modificacion de barra de navegacion Boostrap*/
+
+:root {
+    --color-primario: #222020;
+    --color-emphasis: #131111;
+    --color-secundario: #323643;
+    --color-terciario: #1F4068;
+    --font-primary-color: #fff;
+}
+
+
+.navbar {
+    background-color: var(--color-secundario);
+}
+
+.navbar a .nav-link {
+    color: #ffff
+}
+
+/*Logo*/
+  
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+/*Banner*/
+
+.header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #ffff;
+}
+
+.content {
+    max-width: 22rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+}
+
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header-video video {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.header-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #303952;
+    z-index: 1;
+    opacity: .60;
+}
+
+.header-content {
+    z-index: 2;
+}
+
+.header-content h1{
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.header-content span {
+    font-size: 1.5rem;
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 3px solid;
+    width: 24ch;
+
+    animation: typing 2s steps(20), blink .5s infinite step-end alternate;
+    overflow: hidden
+}
+
+
+@keyframes typing {
+    from { width: 0 }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+.header-content a {
+    background-color: #c44569;
+    color: #ffff;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+/*Sobre mi*/
+
+.img_sujeto {
+    border-radius: 0px 60px 60px 60px;
+    box-shadow: 5px 5px 10px #2b2b2b;
+}
+
+
+.titulo {
+
+    justify-content: center;
+}
+
+.perfil-img img{ 
+    transition: 0.5s;
+    object-fit: cover;
+}
+img:hover {
+    transform: scale(1.2);
+}
+img {
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+#sobre-mi {
+    min-height: 80vh;
+}
+#habilidades {
+    min-height: 80vh;
+}
+.sobre {
+   font-size: 60px;
+   color: #ffff;
+}
+strong {
+    font-size: 60px;
+    color: #ffff;
+}
+p {
+    color: #b0acac;
+    font-size: 18px;
+    
+    
+}
+li {
+    list-style: none;
+    color: #b0acac;
+    font-size: 18px;
+}
+
+h2 {
+    display: inline-block;
+}
+.text {
+    border-bottom: 1px black;
+}
+
+/*Cartas*/
+
+.hover_contenedor {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hover_contenedor figure {
+    position: relative;
+
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0,0.50);
+    cursor: pointer;
+}
+
+.hover_contenedor figure img {
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.hover_contenedor figure .capa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 57, 82, 0.7);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.hover_contenedor figure:hover > .capa {
+    opacity: 1;
+    visibility: visible;
+}
+.hover_contenedor figure:hover > .capa h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.hover_contenedor figure:hover > img {
+    transform: scale(1.3);
+}
+
+
+.hover_contenedor figure .capa h3 {
+    color: #fff;
+    font-weight: 400px;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 30px;
+}
+
+.hover_contenedor figure .capa span{
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+
+.hover_contenedor figure .capa a {
+    background-color: #c44569;
+    margin: 10px;
+    color: #fff;
+    
+}
+
+.form {
+    width: 900px;
+    height: 500px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(50vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw -40px);
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+}
+
+.contacto {
+    font-size: 20px;
+    margin: 10px 0;
+    padding-bottom: 1px;
+    width: 180px;
+    color: grey;
+    border-bottom: 3px solid black;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Quicksand', sans-serif;
+    transition: all .3s;
+    border-bottom: 2px solid grey;
+}
+
+input:focus{
+    border-bottom: 2px solid lightblue;
+}
+
+p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: gray;
+}
+
+button{
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: 'Quicksand', sans-serif;
+    border: 2px solid grat;
+    background: 0;
+    color: black;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+button:hover {
+    background: #303952;
+    color: white;
+}
+
+.bcontacto {
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    background: black;
+    color: white;
+    width: 520px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 15px;
+    box-shadow: 10px 10px 40px -14px #000;
+}
+i {
+    margin: 0px 5px 15px;
+    padding-left: 15px;
+
+}
+.ico {
+    margin: 0 5px 0 15px;
+    padding-left: 5px;
+}
+
+@media (max-width: 980px){
+    .form {
+        width: 600px;
+    }
+    .bcontacto {
+        width: 250px;
+    }
+}
+
+@media (max-width: 680px){
+    .form {
+        width: 400px;
+    }
+    .bcontacto {
+        width: 300px;
+    }
+}
+       
+@media (max-width: 360px){
+    .form {
+        width: 300px;
+    }
+}
+
+
+/*Tarjetas habilidades smooth*/
+
+
+.ta-1{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 5s;
+}
+
+.ta-2{
+    opacity: 0;
+    transition: 5s;
+    transform: translateY(130px);
+}
+
+.ta-3{
+    opacity: 0;
+    transition: 5s;
+    transform: translateY(160px);
+}
+
+.ta-4{
+    opacity: 0;
+    transition: 5s;
+    transform: translateY(190px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+  /*Footer*/
+
+  
+.footer {
+    background: #323643;
+}
